@@ -5,7 +5,6 @@ import (
 	"log"
 
 	"github.com/hajimehoshi/ebiten/v2"
-	"github.com/hajimehoshi/ebiten/v2/ebitenutil"
 	"github.com/hajimehoshi/ebiten/v2/inpututil"
 )
 
@@ -15,10 +14,8 @@ type Game struct {
 }
 
 func NewGame() *Game {
-	img, _, err := ebitenutil.NewImageFromFile("assets/atlas.png")
-	if err != nil {
-		log.Fatal(err)
-	}
+
+	img := mustLoadImage("assets/atlas.png")
 
 	inventory := NewInventory()
 	inventory.Hand.ItemId = 1
