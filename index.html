@@ -1,4 +1,7 @@
 <!doctype html>
+<head>
+  <title>Inventory Demo</title>
+</head>
 <script src="wasm_exec.js"></script>
 <script>
   // Polyfill
@@ -11,7 +14,7 @@
 
   const go = new Go();
   WebAssembly.instantiateStreaming(
-    fetch("roguelike-demo.wasm"),
+    fetch("minecraft-style-inventory-demo.wasm"),
     go.importObject,
   ).then((result) => {
     go.run(result.instance);
