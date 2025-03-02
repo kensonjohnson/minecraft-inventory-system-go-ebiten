@@ -32,7 +32,7 @@ if [ -f "dist/wasm_exec.js" ]; then
 else
     echoYellow "❌ wasm_exec.js not in dist directory"
     echoPurple "🔨Copy the wasm_exec.js file to the dist directory"
-    cp "$(go env GOROOT)/misc/wasm/wasm_exec.js" dist
+    cp "$(go env GOROOT)/lib/wasm/wasm_exec.js" dist
     echoPurple "✅ wasm_exec.js copied to dist directory"
 fi
 
